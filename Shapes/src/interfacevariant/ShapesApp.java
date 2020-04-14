@@ -10,10 +10,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
-
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+
 
 
 /**
@@ -202,14 +200,6 @@ public class ShapesApp implements ShapeInterface, Comparable<ShapesApp>  {
             return 0;
         }
     }
-        
-//        int returnValue = 0;
-//        
-//        if (this.shapes.area().compareTo(o.area()) > 0)  { returnValue = 1; }
-//        if (this.shapes.area().compareTo(o.area()) == 0)  { returnValue = 0; }
-//        if (this.shapes.area().compareTo(o.area()) < 0)  { returnValue = -1; }
-//        return returnValue;
-//    }
 
     @Override
     public double area() {
