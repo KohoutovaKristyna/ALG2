@@ -133,7 +133,7 @@ public class Kalendar {
             }
             if (isLeapYear(year)) {
                 if (month != 2) {
-                    throw new IllegalArgumentException("Takovy den neexistuje");          //tato cast zpusobovala chyby, nevim, proc
+                    throw new IllegalArgumentException("Takovy den neexistuje");         
                 } else if (day > 29) {
                     throw new IllegalArgumentException("Takovy den neexistuje");
                 } 
