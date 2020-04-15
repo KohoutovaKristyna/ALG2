@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.lang.StringBuffer;
 /**
  *
- * @author tynka
+ * @author kristyna kohoutova
  */
 public class Kalendar {
 
@@ -23,33 +23,38 @@ public class Kalendar {
      */
     public static void main(String[] args) {
         //inicializace
-
+        System.out.println("Zadejte den, mesic a rok");
         int day = sc.nextInt();
         int month = sc.nextInt();
         int year = sc.nextInt();
         int weekDay = 0;
+        
         Kalendar kl = new Kalendar(day, month, year);
         //System.out.println(isLeapYear(year));
         System.out.println(kl.getCalendar());
-        int vysledek = kl.getMenu();
-        if(vysledek == 1){
-            kl.nextMonth();
+        callMenu(kl);
+        //int vysledek = kl.getMenu();
+       
+        
+    }
+    public static void callMenu(Kalendar k){
+        int vysledek = k.getMenu();
+        while(vysledek !=0){
+             if(vysledek == 1){
+            k.nextMonth();
         }
         else if(vysledek == -1){
-            kl.previousMonth();
+            k.previousMonth();
         }
-        else{
-            System.out.println("Spatna volba, zkuste to znovu");
-            kl.getMenu();
+            System.out.println(k.getCalendar());
+        vysledek = k.getMenu();
         }
-        System.out.println(kl.getCalendar());
-        
     }
  
     public int getMenu(){
         int choise;
-        System.out.println("Pro posouvani mezi mesici je potrebne vybrat volbu:");
-        System.out.println("Pro posun dopredu 1, pro posun o mesic zpet -1");
+        System.out.println("Pro posouvani mezi mesici je potreba vybrat volbu:");
+        System.out.println("Pro posun dopredu 1, pro posun o mesic zpet -1, pro ukonceni programu 0");
         choise = sc.nextInt();
         if(choise == 1){
             return 1;
