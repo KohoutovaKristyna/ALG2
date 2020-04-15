@@ -121,24 +121,31 @@ public class Kalendar {
     }
 
     public Kalendar(int day, int month, int year) {
-           if(day <1 ){
-                   //|| day > daysInMonth[month-1] && 
-                //(isLeapYear(year)==false)||(isLeapYear(year)&& (month!=2 || (month == 2 && day>29)))){       //pokus o osetreni horni hranice
-            throw new IllegalArgumentException("Takovy den neexistuje");
-           
-        }
-        else{
-        this.day = day;
-        }
-        if(month<1 || month>12){
+
+        if (month < 1 || month > 12) {
             throw new IllegalArgumentException("Takovy mesic neexistuje");
+        } else {
+            this.month = month;
         }
-        else{
-          this.month = month;  
+        if (day < 1 || day > daysInMonth[month - 1]) {
+            if (isLeapYear(year) == false) {
+                throw new IllegalArgumentException("Takovy den neexistuje");
+            }
+            if (isLeapYear(year)) {
+                if (month != 2) {
+                    throw new IllegalArgumentException("Takovy den neexistuje");
+                } else if (day > 29) {
+                    throw new IllegalArgumentException("Takovy den neexistuje");
+                }
+                //|| day > daysInMonth[month-1] && 
+                //(isLeapYear(year)==false)||(isLeapYear(year)&& (month!=2 || (month == 2 && day>29)))){       //pokus o osetreni horni hranice 
+            } else {
+                this.day = day;
+            }
+
+            this.year = year;
+
         }
-        
-        this.year = year;
-        
     }
 
     public int getZeller(int day, int month, int year) {
