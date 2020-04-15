@@ -7,17 +7,19 @@ package kalendar;
 
 import java.util.Scanner;
 import java.lang.StringBuffer;
+
 /**
  *
  * @author kristyna kohoutova
  */
 public class Kalendar {
 
- private int day;
-    private int month; 
+    private int day;
+    private int month;
     private int year;
-    private int[] daysInMonth = {31,28,31,30,31,30,31,31,30,31,30,31};
-    static Scanner sc = new Scanner(System.in);   
+    private int[] daysInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    static Scanner sc = new Scanner(System.in);
+
     /**
      * @param args the command line arguments
      */
@@ -27,47 +29,42 @@ public class Kalendar {
         int day = sc.nextInt();
         int month = sc.nextInt();
         int year = sc.nextInt();
-        int weekDay = 0;
-        
+
         Kalendar kl = new Kalendar(day, month, year);
-        //System.out.println(isLeapYear(year));
         System.out.println(kl.getCalendar());
         callMenu(kl);
-        //int vysledek = kl.getMenu();
-       
-        
+
     }
-    public static void callMenu(Kalendar k){
+
+    public static void callMenu(Kalendar k) {
         int vysledek = k.getMenu();
-        while(vysledek !=0){
-             if(vysledek == 1){
-            k.nextMonth();
-        }
-        else if(vysledek == -1){
-            k.previousMonth();
-        }
+        while (vysledek != 0) {
+            if (vysledek == 1) {
+                k.nextMonth();
+            } else if (vysledek == -1) {
+                k.previousMonth();
+            }
             System.out.println(k.getCalendar());
-        vysledek = k.getMenu();
+            vysledek = k.getMenu();
         }
     }
- 
-    public int getMenu(){
+
+    public int getMenu() {
         int choise;
         System.out.println("Pro posouvani mezi mesici je potreba vybrat volbu:");
-        System.out.println("Pro posun dopredu 1, pro posun o mesic zpet -1, pro ukonceni programu 0");
+        System.out.println("Pro posun na dalsi mesic 1, pro posun o mesic zpet -1, pro ukonceni programu 0");
         choise = sc.nextInt();
-        if(choise == 1){
+        if (choise == 1) {
             return 1;
-        }
-        else if(choise == -1){
+        } else if (choise == -1) {
             return -1;
+        } else {
+            return 0;
         }
-        else{return 0;}
     }
-  
+
     public String getCalendar() {
-        int daysmonth = daysInMonth[(this.month)-1];
-        //System.out.println((this.month)-1);
+        int daysmonth = daysInMonth[(this.month) - 1];
         StringBuilder sb = new StringBuilder();
         sb.append("po ");
         sb.append("ut ");
@@ -86,13 +83,12 @@ public class Kalendar {
             sb.append("   ");
 
         }
-        //System.out.println(getZeller(1, month, year));
 
         for (int i = 1; i <= daysmonth; i++) {
             if (i < 10) {
-                sb.append(i + "  ");
+                sb.append(i).append("  ");
             } else {
-                sb.append(i + " ");
+                sb.append(i).append(" ");
             }
 
             if (getZeller(i, month, year) == 7) {
@@ -103,66 +99,88 @@ public class Kalendar {
         String st = sb.toString();
         return st;
     }
-    
-    public void nextMonth(){
+
+    public void nextMonth() {
         this.day = 1;
-        if(this.month == 12){
+        if (this.month == 12) {
             this.month = 1;
+        } else {
+            this.month += 1;
         }
-        else{
-           this.month += 1; 
-        }
-        
+
     }
-    
-    public void previousMonth(){
+
+    public void previousMonth() {
         this.day = 1;
-        if(this.month == 1){
+        if (this.month == 1) {
             this.month = 12;
+        } else {
+            this.month -= 1;
+        }
+
+    }
+
+    public Kalendar(int day, int month, int year) {
+           if(day <1 ){
+                   //|| day > daysInMonth[month-1] && 
+                //(isLeapYear(year)==false)||(isLeapYear(year)&& (month!=2 || (month == 2 && day>29)))){       //pokus o osetreni horni hranice
+            throw new IllegalArgumentException("Takovy den neexistuje");
+           
         }
         else{
-          this.month -= 1;  
+        this.day = day;
+        }
+        if(month<1 || month>12){
+            throw new IllegalArgumentException("Takovy mesic neexistuje");
+        }
+        else{
+          this.month = month;  
         }
         
-    }
-    public Kalendar(int day, int month, int year) {
-        this.day = day;
-        this.month = month;
         this.year = year;
+        
     }
 
-
-    public int getZeller(int day, int month, int year){
+    public int getZeller(int day, int month, int year) {
         int dayOfWeek;
         int h;
         int q = day;
-        int m = month;
-        if(m == 1){
-            m = 13;
+        int m;
+        int K = year % 100;
+        int J = year / 100;
+
+        switch (month) {
+            case 1:
+                m = 13;
+                K -= 1;
+                break;
+            case 2:
+                m = 14;
+                K -= 1;
+                break;
+            default:
+                m = month;
+                break;
         }
-        else if(m == 2){
-            m = 14;
-        }
-        int K = year%100;
-        
-        int J = year/100;
-        
-         h = (q + ((13 * (m + 1)) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
-         
-        dayOfWeek = ((h+5) % 7)+1;
+
+        h = (q + ((13 * (m + 1)) / 5) + K + (K / 4) + (J / 4) + 5 * J) % 7;
+
+        dayOfWeek = ((h + 5) % 7) + 1;
         return dayOfWeek;
     }
-    public static boolean isLeapYear(int year){
-        if((year%4 == 0 && year%100 !=0 )|| year %400==0){
+
+    public static boolean isLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             return true;
         }
         return false;
     }
-    public static int getDaysOfYear(int year){
-        if(isLeapYear(year)){
+
+    public static int getDaysOfYear(int year) {
+        if (isLeapYear(year)) {
             return 366;
         }
         return 365;
     }
-    
+
 }
