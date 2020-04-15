@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author tynka
+ * @author kristyna kohoutova
  */
 public class Polynom {
     //5x3 + 2x2 + 3

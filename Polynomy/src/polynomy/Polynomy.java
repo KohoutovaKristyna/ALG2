@@ -7,7 +7,7 @@ package polynomy;
 
 /**
  * Library knihovni trida
- * @author tynka
+ * @author kristyna kohoutova
  */
 //vytvorime privatni konstruktor, aby nikdo nemohl vytvorit objekt teto tridy
 public class Polynomy {

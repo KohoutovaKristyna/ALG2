@@ -7,7 +7,7 @@ package fraction;
 
 /**
  *
- * @author týnka
+ * @author kristyna kohoutova
  */
 public class FractionsCalculator {
 
