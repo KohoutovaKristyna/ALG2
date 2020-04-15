@@ -131,20 +131,21 @@ public class Kalendar {
             if (isLeapYear(year) == false) {
                 throw new IllegalArgumentException("Takovy den neexistuje");
             }
-//            if (isLeapYear(year)) {
-//                if (month != 2) {
-//                    throw new IllegalArgumentException("Takovy den neexistuje");          //tato cast zpusobovala chyby, nevim, proc
-//                } else if (day > 29) {
-//                    throw new IllegalArgumentException("Takovy den neexistuje");
-//                } 
-//            }
+            if (isLeapYear(year)) {
+                if (month != 2) {
+                    throw new IllegalArgumentException("Takovy den neexistuje");          //tato cast zpusobovala chyby, nevim, proc
+                } else if (day > 29) {
+                    throw new IllegalArgumentException("Takovy den neexistuje");
+                } 
+            }
             else {
                 this.day = day;
             }
+        }
 
             this.year = year;
 
-        }
+        
     }
 
     public int getZeller(int day, int month, int year) {
