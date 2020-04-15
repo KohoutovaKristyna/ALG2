@@ -136,9 +136,7 @@ public class Kalendar {
                     throw new IllegalArgumentException("Takovy den neexistuje");
                 } else if (day > 29) {
                     throw new IllegalArgumentException("Takovy den neexistuje");
-                }
-                //|| day > daysInMonth[month-1] && 
-                //(isLeapYear(year)==false)||(isLeapYear(year)&& (month!=2 || (month == 2 && day>29)))){       //pokus o osetreni horni hranice 
+                } 
             } else {
                 this.day = day;
             }
