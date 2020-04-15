@@ -7,9 +7,10 @@ package comparing;
 
 /**
  *
- * @author kristyna kohoutova
+ * @author tynka
  */
-public interface CompareInterface {
-    boolean isSmaller(CompareInterface o);
-    
+public class ComparatorI {
+     public boolean bigger(Object o1, Object o2){
+        return ((Student)o1).getNumber() > ((Student)o2).getNumber();
+    }
 }

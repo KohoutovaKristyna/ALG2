@@ -12,6 +12,7 @@ package comparing;
 public class MyComparing {
     public static void main(String[] args) {
         Student[] students = Datasource.loadDataAsArray();
+        System.out.println(students[0].equals(students[1]));
         print(students);
         System.out.println("Sort by number");
         sortByNumber(students);
@@ -37,7 +38,21 @@ public class MyComparing {
         }
     }
     
+    public static void sort(Object [] array, ComparatorI comparator){
+          for (int i = 0; i < array.length-1; i++) {
+            for (int j = 1; j < array.length-i; j++) {
+                if (comparator.bigger(array[j-1], array[j])) {
+                    Object temp = array[j];
+                    array[j] = array[j-1];
+                    array[j-1] = temp;
+                }
+   
+            }
+        }
+    }
+    
     Student[] students = Datasource.loadDataAsArray();
+    
     private static void sortByNumber(Student[] array){
         for (int i = 0; i < array.length-1; i++) {
             for (int j = 1; j < array.length-i; j++) {
@@ -51,6 +66,7 @@ public class MyComparing {
         }
     
     } 
+
        private static void sortByAge(Student[] array){
         for (int i = 0; i < array.length-1; i++) {
             for (int j = 1; j < array.length-i; j++) {

@@ -189,16 +189,27 @@ public class ShapesApp implements ShapeInterface, Comparable<ShapesApp>  {
     //@Override
     @Override
     public int compareTo(ShapesApp o) {
+        double EPS = 0.0001;
+        double diff = area() - o.area();
         
-        if((this.area() - o.area())>0){
-            return 1;
-        }
-        else if((this.area() - o.area())<0){
-            return -1;
-        }
-        else{
+        if(Math.abs(diff)<EPS){
             return 0;
         }
+        else if(diff > 0){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+//        if((this.area() - o.area())>EPS){
+//            return 1;
+//        }
+//        else if((this.area() - o.area())<0){
+//            return -1;
+//        }
+//        else{
+//            return 0;
+//        }
     }
 
     @Override

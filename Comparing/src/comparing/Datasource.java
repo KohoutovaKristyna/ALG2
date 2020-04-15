@@ -16,7 +16,7 @@ import java.util.List;
 public class Datasource {
     private static Student[] data = {
         new Student("Jan","Maly",1234,20),
-        new Student("Alice","Velka",1136,19),
+        new Student("Alice","Velka",1234,19),
         new Student("Bob","Pech",1954,18)
     };
     

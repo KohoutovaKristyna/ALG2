@@ -94,16 +94,77 @@ public class Student implements CompareInterface, Comparable<Student>{
     
      @Override
     public int compareTo(Student o) { //genericita, umoznuje doplnit typy objektu, ktere se porovnavaji
-        if((this.average - o.average)>0){
-            return 1;
-        }
-        else if((this.average - o.average)<0){
-            return -1;
-        }
-        else{
+        double EPS = 0.0001;
+        double diff = getAverage() - o.getAverage();
+        
+        if(Math.abs(diff) < EPS){
             return 0;
         }
+        else if(diff > 0){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+        
+        
+//        if((this.average - o.average)>0){
+//            return 1;
+//        }
+//        else if((this.average - o.average)<0){
+//            return -1;
+//        }
+//        else{
+//            return 0;
+//        }
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getLatsName() {
+        return latsName;
+    }
+    
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 71 * hash + this.number;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Student other = (Student) obj;
+        if (this.number != other.number) {
+            return false;
+        }
+        return true;
+    }
+
+ 
+
+
+    
     
     public void addGrades(int[] grades){
         for (int i = 0; i < grades.length; i++) {
