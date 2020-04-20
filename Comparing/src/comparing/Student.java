@@ -11,7 +11,7 @@ package comparing;
  */
 public class Student implements CompareInterface, Comparable<Student>{
   private String firstName;
-  private String latsName;
+  private String lastName;
   private int age;
   private int number;
   private int [] grades;  //max 10
@@ -20,7 +20,7 @@ public class Student implements CompareInterface, Comparable<Student>{
 
     public Student(String firstName, String latsName, int number, int age) {
         this.firstName = firstName;
-        this.latsName = latsName;
+        this.lastName = latsName;
         this.age = age;
         this.number = number;
         grades = new int[numberOfGrades];
@@ -35,7 +35,7 @@ public class Student implements CompareInterface, Comparable<Student>{
 
     @Override
     public String toString() {
-        return "Student{" + "firstName=" + firstName + ", latsName=" + latsName + ", age=" + age + ", number=" + number + ", grades=" + getGrades() + ", average=" + String.valueOf(getAverage()) + '}';
+        return "Student{" + "firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", number=" + number + ", grades=" + getGrades() + ", average=" + String.valueOf(getAverage()) + '}';
     }
 
     
@@ -131,8 +131,8 @@ public class Student implements CompareInterface, Comparable<Student>{
         return number;
     }
 
-    public String getLatsName() {
-        return latsName;
+    public String getLastName() {
+        return lastName;
     }
     
 

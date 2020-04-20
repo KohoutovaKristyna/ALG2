@@ -5,9 +5,15 @@
  */
 package comparing;
 
+import comparing.mycomparing.ComparatorStudentByNum;
+import comparing.mycomparing.ComparatorStudentByFirstname;
+import static comparing.MyComparing.sort;
+import java.text.Collator;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 /**
  *
@@ -25,6 +31,7 @@ public class Comparing{
         students[2].addGrades(array2);
         print(students);
         System.out.println("Sort by number");
+       
         
         Arrays.sort(students);  //Student musi byt typovo kompatibilny s Comparable<Student>
         print(students);
@@ -33,16 +40,26 @@ public class Comparing{
         print(students1);
         
         
-//        for (int i = 0; i < array.length; i++) {
-//            students[1].addGrade(array[i]); 
-//        }
-        
-        
-        
         System.out.println("Sort by number");
         Collections.sort(students1);
         print(students1);
+        System.out.println("Sort by name");
+         sort(students, new ComparatorStudentByFirstname());
+        print(students);
+         sort(students, new ComparatorStudentByNum());
+        print(students);
         
+        //anonymni trida
+        System.out.println("Sort by lastname");
+        Arrays.sort(students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                Collator col = Collator.getInstance(new Locale("cs","CZ"));
+                return col.compare(o1.getLastName(), o2.getLastName());
+                //return o1.getLastName().compareTo(o2.getLastName());
+            }
+        });
+       // Arrays.sort(students, (Student o1, Student o2) -> o1.getLastName().compareTo(o2.getLastName()));  //lambda vyraz   - dalsi moznost
     }
      public static void print(Student[] array){
         for (Object o: array) {

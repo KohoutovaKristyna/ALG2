@@ -5,6 +5,10 @@
  */
 package comparing;
 
+import comparing.mycomparing.ComparatorInterface;
+import comparing.mycomparing.ComparatorStudentByFirstname;
+import comparing.mycomparing.ComparatorStudentByNum;
+
 /**
  *
  * @author kristyna kohoutova
@@ -23,6 +27,10 @@ public class MyComparing {
         System.out.println("Sort by number");
         sort(students);
         print(students);
+        sort(students, new ComparatorStudentByNum());
+        print(students);
+        sort(students, new ComparatorStudentByFirstname());
+        print(students);
     }
     
     public static void sort(CompareInterface[] array){
@@ -38,10 +46,10 @@ public class MyComparing {
         }
     }
     
-    public static void sort(Object [] array, ComparatorI comparator){
+    public static void sort(Object [] array, ComparatorInterface o){
           for (int i = 0; i < array.length-1; i++) {
             for (int j = 1; j < array.length-i; j++) {
-                if (comparator.bigger(array[j-1], array[j])) {
+                if (o.bigger(array[j-1], array[j])) {
                     Object temp = array[j];
                     array[j] = array[j-1];
                     array[j-1] = temp;
