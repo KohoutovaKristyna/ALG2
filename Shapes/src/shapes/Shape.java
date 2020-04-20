@@ -9,7 +9,8 @@ package shapes;
  *
  * @author kristýna kohoutová
  */
-public abstract class Shape { //nebudou se z ni vytvaret objekty, jen k prekryti
+public abstract class Shape implements Comparable<Shape>{ //nebudou se z ni vytvaret objekty, jen k prekryti
+    //data
     protected String name = "Geometric shape";
     
     //methods
@@ -24,4 +25,17 @@ public abstract class Shape { //nebudou se z ni vytvaret objekty, jen k prekryti
         return name + " " +  getShapeName();
     }
     
+    @Override
+    public int compareTo(Shape s){
+         double EPS = 0.0001;
+        double diff = area() - s.area();
+        
+        if(Math.abs(diff)<EPS){
+            return 0;
+        } else if(diff > 0){
+            return 1;
+        } else{
+            return -1;
+        }
+    }
 }

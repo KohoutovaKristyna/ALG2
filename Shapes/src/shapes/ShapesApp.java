@@ -5,6 +5,7 @@
  */
 package shapes;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 /**
  *
@@ -47,6 +48,9 @@ public class ShapesApp {
                 case 8:
                     getObjectInfo();
                     break;
+                case 9:
+                    sortObjects();
+                    break;
                 default:
                     System.out.println("Chybna volba");
 
@@ -65,6 +69,7 @@ public class ShapesApp {
         System.out.println("6. Vypocti celkovou plochu");
         System.out.println("7. Vypis objekt s nejvetsi plochou");
         System.out.println("8. Vypis plochu objektu");
+        System.out.println("9. Serad objekty podle plochy");
         System.out.println("0. Konec programu");
     }
 
@@ -141,6 +146,16 @@ public class ShapesApp {
         System.out.println("Zadej cislo objektu");
         int input = sc.nextInt();
         System.out.println("Typ: "+ (shapes.get(input)).toString()+", obsah: "+shapes.get(input).area());
+    }
+
+    private static void sortObjects() {
+        if(checkEmpty()) return;
+        Collections.sort(shapes);
+        System.out.println("Objekty byly serazeny podle obsahu plochy.");
+    }
+
+    private static boolean checkEmpty() {
+        return shapes == null;
     }
 
 }
