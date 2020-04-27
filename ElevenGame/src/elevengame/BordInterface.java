@@ -7,7 +7,7 @@ package elevengame;
 
 /**
  *
- * @author tynka
+ * @author kristyna kohoutova
  */
 public interface BordInterface {
 

@@ -11,6 +11,12 @@ public class Card {
     
     //methods
 
+    public Card(String symbol, String value, int nPoints) {
+        this.symbol = symbol;
+        this.value = value;
+        this.nPoints = nPoints;
+    }
+
     public String getSymbol() {
         return symbol;
     }
@@ -22,5 +28,11 @@ public class Card {
     public int getnPoints() {
         return nPoints;
     }
+
+    @Override
+    public String toString() {
+        return "Card{" + "symbol=" + symbol + ", value=" + value + ", nPoints=" + nPoints + '}';
+    }
+    
     
 }
