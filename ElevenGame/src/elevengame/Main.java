@@ -17,7 +17,11 @@ public class Main {
     public static BordInterface bord;
 
     public static void main(String[] args) {
-
+        String[] symbol = {"Srdce", "Piky", "Krize", "Kara"};
+        String[] value = { "A","2", "3", "4","5","6", "7", "8","9","10", "J", "Q", "K"};
+        int[] nPoints = {1,2,3,4,5,6,7,8,9,10,0,0,0}; 
+         bord = new Bord(symbol, value, nPoints, 9);
+        
         while (bord.isAnotherPlayPossible()) {  // zda jsou jeste karty v balicku, na stole a existuje suma 11
             System.out.println("************** " + bord.getName() + " ***************");
             displayCards();

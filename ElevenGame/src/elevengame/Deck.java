@@ -5,6 +5,7 @@
  */
 package elevengame;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,8 +14,8 @@ import java.util.List;
  * @author kristyna kohoutova
  */
 public class Deck{
-    private List<Card> deckCards;
-    private int deckCardsSize = deckCards.size();
+    private List<Card> deckCards = new ArrayList();
+    private int deckCardsSize;
     private String[] symbol;
     private String[] value;
     private int[] nPoints;
@@ -24,7 +25,8 @@ public class Deck{
     public Deck(String[] symbol, String[] value, int[] points) {
         for (int i = 0; i < symbol.length; i++) {
             for (int j = 0; j < value.length; j++) {
-                deckCards.add(new Card(symbol[i],value[j], points[j]));          
+                Card c = new Card(symbol[i],value[j], points[j]);
+                deckCards.add(c);          
             }
         }
         shuffle();
@@ -32,13 +34,13 @@ public class Deck{
     
     
     public int nCardsInDeck(){
-        return deckCardsSize;
+        return deckCardsSize = deckCards.size();
     }
     
-    public Card deal(){
+    public void deal(){
        deckCardsSize--;
        //return deckCards[deckCardsSize];
-        
+        //asi nestaci jenom snizovat citac
         
     }
     public void shuffle(){
