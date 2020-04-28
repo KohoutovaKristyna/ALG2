@@ -118,6 +118,7 @@ public class Bord implements BordInterface{
         this.size = size;
         for (int i = 0; i < size; i++) {
             bordCards.add(deck.getDeckCard(i+1));
+            deck.deal();
         }
         
         

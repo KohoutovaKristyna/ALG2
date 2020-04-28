@@ -26,19 +26,22 @@ public class Deck{
         for (int i = 0; i < symbol.length; i++) {
             for (int j = 0; j < value.length; j++) {
                 Card c = new Card(symbol[i],value[j], points[j]);
-                deckCards.add(c);          
+                deckCards.add(c); 
+                deal();
             }
         }
         shuffle();
+        deckCardsSize = deckCards.size();
     }
     
     
     public int nCardsInDeck(){
-        return deckCardsSize = deckCards.size();
+        return deckCardsSize;
     }
     
     public void deal(){
        deckCardsSize--;
+      
        //return deckCards[deckCardsSize];
         //asi nestaci jenom snizovat citac
         

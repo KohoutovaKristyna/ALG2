@@ -30,10 +30,11 @@ public class Main {
             String[] selectedCardsPositions = sc.nextLine().split(" +");
             if (!bord.playAndReplace(selectedCardsPositions)) {
                 System.out.println("Nevalidni tah");
-            } else {
-                displayCards();
-                displayDeck();
             }
+//            } else {
+//                displayCards();
+//                displayDeck();
+//            }
         }
         if(bord.hasWon()){
             System.out.println("Gratuluji");
