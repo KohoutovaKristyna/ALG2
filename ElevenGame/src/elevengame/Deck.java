@@ -12,17 +12,19 @@ import java.util.List;
  * Reprezentuje balicek karet
  * @author kristyna kohoutova
  */
-public class Deck {
-    List<Card> deckCards;
+public class Deck{
+    private List<Card> deckCards;
+    private int deckCardsSize = deckCards.size();
+    private String[] symbol;
+    private String[] value;
+    private int[] nPoints;
     
     // methods
 
     public Deck(String[] symbol, String[] value, int[] points) {
         for (int i = 0; i < symbol.length; i++) {
             for (int j = 0; j < value.length; j++) {
-                if(value[j]=="A"){
-                  deckCards.add(new Card(symbol[i],value[j], points[j]));
-                }              
+                deckCards.add(new Card(symbol[i],value[j], points[j]));          
             }
         }
         shuffle();
@@ -30,15 +32,42 @@ public class Deck {
     
     
     public int nCardsInDeck(){
-        return deckCards.size();
+        return deckCardsSize;
     }
     
-    public int deal(){
-        return deckCards.size()-1;
+    public Card deal(){
+       deckCardsSize--;
+       //return deckCards[deckCardsSize];
+        
+        
     }
     public void shuffle(){
         Collections.shuffle(deckCards);
     }
+
+    @Override
+    public String toString() {
+        return "Deck{" + "deckCards=" + deckCards + ", deckCardsSize=" + deckCardsSize + '}';
+    }
+    public boolean isEmpty(){
+        if(deckCards.size() == 0){
+            return true;
+        }
+        return false;
+    }
+
+    public List<Card> getDeckCards() {
+        return deckCards;
+    }
+    public Card getDeckCard(int index){
+        return deckCards.get(index);
+    }
+
+ 
+
+
+    
+    
     
     
 }

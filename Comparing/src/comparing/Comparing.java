@@ -62,6 +62,7 @@ public class Comparing{
        // Arrays.sort(students, (Student o1, Student o2) -> o1.getLastName().compareTo(o2.getLastName()));  //lambda vyraz   - dalsi moznost
     }
      public static void print(Student[] array){
+         
         for (Object o: array) {
             System.out.println(o);
         }

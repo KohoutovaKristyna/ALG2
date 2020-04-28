@@ -5,6 +5,8 @@
  */
 package elevengame;
 
+import java.util.List;
+
 /**
  *
  * @author kristyna kohoutova
@@ -12,6 +14,8 @@ package elevengame;
 public class Bord implements BordInterface{
     Card[] cards;
     Deck deck;
+    private List<Card> bordCards;
+    private int size;
     
     //methods
 
@@ -37,7 +41,10 @@ public class Bord implements BordInterface{
 
     @Override
     public boolean hasWon() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(deck.isEmpty()){
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -47,6 +54,37 @@ public class Bord implements BordInterface{
 
     @Override
     public boolean isAnotherPlayPossible() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int cQ=0,cK=0,cJ=0;
+        for (int i = 0; i < cards.length; i++) {
+            for (int j = 1; j < cards.length-i; j++) {
+                if(cards[i].getnPoints()+cards[j].getnPoints()==11){
+                return true;
+                }
+            }
+            if(cards[i].getValue()=="J" ){
+                 cJ++;   
+            }
+            if (cards[i].getValue()=="Q") {
+               cQ++; 
+            }
+            if (cards[i].getValue()=="K") {
+                cK++;
+            }
+        }
+        if(cJ < 0 && cQ <0 && cK<0){
+            return true;
+        }
+        return false;
     }
+
+    public Bord(String[] symbol, String[] value, int[] points,int size) {
+        this.size = size;
+        for (int i = 0; i < size; i++) {
+            bordCards.add(deck.getDeckCard(i));
+        }
+        
+        
+    }
+    
+    
 }
