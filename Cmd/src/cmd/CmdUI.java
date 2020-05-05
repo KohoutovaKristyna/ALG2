@@ -24,9 +24,14 @@ public class CmdUI {
             System.out.print(cmd.getActualDir() + "$ ");
             line = sc.nextLine();
             try {
-                System.out.println(cmd.parseAndExecute(line));
+                String outputFromParse = cmd.parseAndExecute(line);
+                System.out.println(outputFromParse);
+//                if (outputFromParse == "Exit") { 
+//                    System.out.println("Ukoncuji program...");
+//                    cmd.setIsRunning(false); 
+//                }
             }catch(RuntimeException e){
-                System.out.println(e.getMessage());
+                System.out.print(e.getMessage());
             }
         }
 

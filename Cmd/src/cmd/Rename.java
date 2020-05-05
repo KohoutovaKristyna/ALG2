@@ -11,13 +11,14 @@ import java.io.File;
  *
  * @author kristyna kohoutova
  */
-public class Exit extends Command{
+public class Rename extends Command{
 
     @Override
     public String execute(File actualDir) {
-        CmdEditor.setIsRunning(false);
-        return "Ukoncuji program..";
-        
+        File f = new File(params[1]);
+        File newF = new File(params[2]);
+        f.renameTo(newF);
+        return "File renamed";
     }
     
 }

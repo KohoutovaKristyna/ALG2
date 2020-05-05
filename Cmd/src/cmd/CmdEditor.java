@@ -12,8 +12,8 @@ import java.io.File;
  * @author kristyna kohoutova
  */
 public class CmdEditor implements CmdInterface{
-    private boolean isRunning;
-    private File actualDir;
+    static private boolean isRunning;
+    static private File actualDir;
     private Command command;
     
     public CmdEditor(){
@@ -26,10 +26,9 @@ public class CmdEditor implements CmdInterface{
         return isRunning;
     }
 
-    public void setIsRunning(boolean isRunning) {
-        this.isRunning = isRunning;
+    public static void setIsRunning(boolean state) {
+        isRunning = state;
     }
-    
 
     @Override
     public String getActualDir() {
@@ -43,6 +42,10 @@ public class CmdEditor implements CmdInterface{
         //execute
         return command.execute(actualDir);
         
+    }
+
+    static public void changeActualDir(File path) {
+        actualDir = path;
     }
     
 }

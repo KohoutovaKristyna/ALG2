@@ -5,6 +5,7 @@
  */
 package cmd;
 
+
 /**
  *
  * @author kristyna kohoutova
@@ -12,9 +13,13 @@ package cmd;
 public interface CmdInterface {
 
     public boolean isRunning();
+    
+    //public void setIsRunning(boolean status);
 
     public String getActualDir();
 
     public String parseAndExecute(String line);
+    
+//    public void changeActualDir(File path);
     
 }
