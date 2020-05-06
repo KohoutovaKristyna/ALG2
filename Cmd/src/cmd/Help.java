@@ -18,6 +18,7 @@ public class Help extends Command{
         
         String help = "HELP\n" 
                 + String.format("%-30s %s\n", "dir", "Display list of files and folders")
+                + String.format("%-30s %s\n", "dir [-o]", "Display an ordered list of files and folders")
                 + String.format("%-30s %s\n", "cd [folder name]", "Change directory - move to a specific folder")
                 + String.format("%-30s %s\n", "cd ..", "Change directory - move to the folder one level higher")
                 + String.format("%-30s %s\n", "mkdir [folder name]", "Create new folders")
