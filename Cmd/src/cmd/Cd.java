@@ -23,13 +23,17 @@ public class Cd extends Command{
             
         }
         else if(params[1].equals("..")){
-            System.out.println("Druha");
-            String oldDir = actualDir.getAbsolutePath();
-            String[] newDir = oldDir.split("\\");
-            
-            String finalDir = newDir[newDir.length-2];
-            System.out.println(finalDir);
-            File f = new File(finalDir).getAbsoluteFile();
+//            System.out.println("Druha");
+//            String oldDir = actualDir.getAbsolutePath();
+//            String[] newDir = oldDir.split("\\");
+//            
+//            String finalDir = newDir[newDir.length-2];
+//            System.out.println(finalDir);
+//            File f = new File(finalDir).getAbsoluteFile();
+//            CmdEditor.changeActualDir(f);
+              
+            String finalDir = actualDir.getAbsolutePath();
+            File f = new File(finalDir).getParentFile();
             CmdEditor.changeActualDir(f);
             
             return "Directory changed";

@@ -15,10 +15,9 @@ public class Parser {
         //TODO prazdny prikaz
         try{
         String[] p = line.split(" +");
-        if(p.length == 0){
-            
-        }
-        
+//        if(p.length == 0){
+//            
+//        }
         char first = Character.toUpperCase(p[0].charAt(0));
         String name = Command.COMMAND_PACKAGE + "." + first + p[0].substring(1);
         try{

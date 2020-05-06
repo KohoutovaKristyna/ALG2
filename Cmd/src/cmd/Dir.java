@@ -6,6 +6,9 @@
 package cmd;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 /**
@@ -20,6 +23,14 @@ public class Dir extends Command{
         if(params.length == 1){
             files = actualDir.listFiles();
             return dirToString(files);
+        }
+        else if (params.length == 2  &&  params[1].equals("-o")) {
+            System.out.println("podminka");
+            files = actualDir.listFiles();
+            Arrays.sort(files,Comparator.comparingLong(File::lastModified));
+            
+//            (files).toString();
+           return dirToString(files);
         }
         return null;
     }
