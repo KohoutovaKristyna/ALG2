@@ -22,9 +22,17 @@ public class Main {
         boolean keepGoing = true;
         String userAnswer;
         boolean wrongAnswer;
+        String jmeno, prijmeni, email;
 
         //the body of program
         while (keepGoing) {
+            System.out.println("Vitejte v testovacim programu");
+            System.out.println("Zadejte sve krestni jmeno");
+            jmeno = sc.nextLine();
+            System.out.println("Zadejte sve prijmeni");
+            prijmeni = sc.nextLine();
+            System.out.println("Zadejte svuj email, pro odeslani vyhodnocenych vysledku");
+            email = sc.nextLine();
             
             
             
