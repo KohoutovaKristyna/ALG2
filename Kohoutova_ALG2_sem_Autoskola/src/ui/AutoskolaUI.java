@@ -38,7 +38,7 @@ public class AutoskolaUI{
             jmeno = sc.nextLine();
             System.out.println("Zadejte sve prijmeni");
             prijmeni = sc.nextLine();
-            System.out.println("Zadejte svuj email, pro odeslani vyhodnocenych vysledku");
+            System.out.println("Zadejte svuj email, pro odeslani vyhodnocenych vysledku");    //mozna nebude potreba
             email = sc.nextLine();
             aut.createTestPerson(jmeno, prijmeni, email);
             
