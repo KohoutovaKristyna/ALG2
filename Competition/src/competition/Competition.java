@@ -6,10 +6,13 @@
 package competition;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -22,9 +25,16 @@ import java.util.Scanner;
 public class Competition {
     private ArrayList<Runner> runners = new ArrayList<>();
     public void load(String startFile, String finishFile) throws FileNotFoundException, IOException {
+        if(!startFile.matches("^[Ss]tart(20)?([0-2][0-9]|30).*")){
+            throw new IllegalArgumentException("Nepovoleny nazev souboru");
+        }
+//        if(!(startFile.endsWith(".txt") && finishFile.endsWith(".txt"))){
+//            //throw new IllegalArgumentException("Nepovolena koncovka souboru");
+//            throw new IllegalExtensionException("Nepovolena koncovka souboru.");    //vyhozeni vlastniho typu vyjimky
+//        }
         //nacitani pomoci Scanneru
         File startFileF = new File(startFile);
-        Scanner inStart = new Scanner(startFileF);
+        Scanner inStart = new Scanner(startFileF);   //vyhazuje vyjimku nekoho jineho
         while(inStart.hasNext()){
             int number = inStart.nextInt();
             String firstname = inStart.next();
@@ -51,6 +61,7 @@ public class Competition {
                 inFinish.close();
             }
         }
+        
     }
 
     public String getResults() {
@@ -70,8 +81,19 @@ public class Competition {
         return runners.toString();
     }
     
-    public void saveResults(String resultFile) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void saveResults(String resultFile) throws IOException {
+        //using PrintWriter
+        try(PrintWriter outResultFile = new PrintWriter(new BufferedWriter(new FileWriter(new File(resultFile),true)))){
+            //outResultFile = new PrintWriter(new OutputStreamWriter(<File>, <encoding>, <append>)
+            int n = 1;
+            for (Runner runner : runners) {
+                outResultFile.print(n + ".");
+                outResultFile.println(n);
+                n++;
+            }
+        
+        }
+        
     }
     public static void main(String[] args) {
         Competition c = new Competition();

@@ -39,6 +39,7 @@ public class DataEditor  implements HurricaneInterface{
             hurricane.add(h);
         }   
     } 
+    
     @Override
     public String hurricanesInYears(int y1, int y2){
         StringBuilder sb = new StringBuilder("");
@@ -51,6 +52,7 @@ public class DataEditor  implements HurricaneInterface{
         return sb.toString();
         
     }
+    
     @Override
     public String hurricaneByName(String name){
        for (Hurricane h: hurricane) {
@@ -60,6 +62,7 @@ public class DataEditor  implements HurricaneInterface{
        }
        return "Hurricane does not found";
     }
+    
     @Override
     public String hurricaneInfoBySpeed(){      
         Collections.sort(hurricane, Comparator.comparing(Hurricane::getSpeedInKmH));
@@ -68,8 +71,7 @@ public class DataEditor  implements HurricaneInterface{
             sb.append(h.toString());
             sb.append("\n");
         }
-        return sb.toString();
-        
+        return sb.toString();       
     }
    
 //

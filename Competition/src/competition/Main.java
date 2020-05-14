@@ -28,8 +28,13 @@ public static Scanner sc = new Scanner(System.in);
         try{
             c.load(startFile, finishFile);
             break;
-        }catch(FileNotFoundException e){
+        }
+//        }catch(IllegalArgumentException e){
+//            System.out.println(e.getMessage()+ " Zadej znovu.");
+//        }
+        catch(FileNotFoundException | IllegalArgumentException e){
             System.out.println("Neexistujici soubor/y. Zadej znovu");
+            e.printStackTrace();
         }}
         System.out.println(c.getResults());
         System.out.println("Zadej jmeno vysledneho souboru");
