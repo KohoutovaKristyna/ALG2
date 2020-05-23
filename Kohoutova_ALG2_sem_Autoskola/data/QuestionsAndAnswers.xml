@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Questions>
+    <Question Id="1">
+        <QuestionText>Povinnost nesmět ohrozit a nesmět omezit se vztahuje</QuestionText>
+        <Answer Id="a" IsCorrect="false">pouze na řidiče</Answer>
+        <Answer Id="b" IsCorrect="true">na všechny účastníky provozu na pozemních komunikacích, kterým je tato povinnost stanovena zákonem</Answer>
+        <Answer Id="c" IsCorrect="false">pouze na chodce</Answer>
+    </Question>
+    <Question Id="2">
+        <QuestionText>Motorové vozidlo:</QuestionText>
+        <Answer Id="a" IsCorrect="false">je pouze vozidlo poháněné vlastním motorem</Answer>
+        <Answer Id="b" IsCorrect="false">je vozidlo poháněné vlastní pohonnou jednotkou, tramvaj a trolejbus</Answer>
+        <Answer Id="c" IsCorrect="true">je nekolejové vozidlo poháněné vlastní pohonnou jednotkou a trolejbus</Answer>
+    </Question>
+    <Question Id="3">
+        <QuestionText>Znamení o změně směru jízdy paží se dává:</QuestionText>
+        <Answer Id="a" IsCorrect="false">po celou dobu jízdního úkonu</Answer>
+        <Answer Id="b" IsCorrect="true">jen před započetím jízdního úkonu</Answer>
+        <Answer Id="c" IsCorrect="false">po započetí jízdního úkonu</Answer>
+    </Question>
+    <Question Id="4">
+        <QuestionText>Chodci v pěší zóně:</QuestionText>
+        <Answer Id="a" IsCorrect="true">musí umožnit jízdu všem vozidlům</Answer>
+        <Answer Id="b" IsCorrect="false">musí umožnit jízdu pouze vozidlům s právem přednostní jízdy</Answer>
+        <Answer Id="c" IsCorrect="false">nemusí při užívání pěší zóny brát ohled na pohyb vozidel</Answer>
+    </Question>
+    <Question Id="5">
+        <QuestionText>Správný tlak huštění pneumatik se zjišťuje:</QuestionText>
+        <Answer Id="a" IsCorrect="true">na studených, jízdou nezahřátých pneumatikách</Answer>
+        <Answer Id="b" IsCorrect="false">na jízdou zahřátých pneumatikách</Answer>
+        <Answer Id="c" IsCorrect="false">na pneumatikách bez ohledu na jejich teplotu</Answer>
+    </Question>
+    <Question Id="6">
+        <QuestionText>Za křižovatku se nepovažuje:</QuestionText>
+        <Answer Id="a" IsCorrect="true">vyústění polní nebo lesní cesty nebo jiné účelové pozemní komunikace na jinou pozemní komunikace</Answer>
+        <Answer Id="b" IsCorrect="false">místo, kde se protínají nebo spojují dvě polní cesty nebo dvě lesní cesty</Answer>
+        <Answer Id="c" IsCorrect="false">místo, kde se protínají nebo spojují dvě účelové pozemní komunikace</Answer>
+    </Question>
+    <Question Id="7">
+        <QuestionText>Řidič nesmí při jízdě vozidlem:</QuestionText>
+        <Answer Id="a" IsCorrect="false">mít nasazeny ochranné brýle</Answer>
+        <Answer Id="b" IsCorrect="false">prudce zrychlovat</Answer>
+        <Answer Id="c" IsCorrect="true">držet v ruce nebo jiným způsobem telefonní přístroj nebo jiné hovorové nebo záznamové zařízení</Answer>
+    </Question>
+    <Question Id="8">
+        <QuestionText>Dojde-li při jízdě vozidla v tunelu k poruše vozidla, pro kterou se toto vozidlo stalo nepojízdným, nebo dojde-li k dopravní nehodě, je řidič povinnen neprodleně:</QuestionText>
+        <Answer Id="a" IsCorrect="false">opustit tunel</Answer>
+        <Answer Id="b" IsCorrect="true">vypnout motor, a je-li k vytápění vozidla použito nezávislé topení, vypnout i toto topení</Answer>
+        <Answer Id="c" IsCorrect="false">vypnout osvětlení vozidla</Answer>
+    </Question>
+    <Question Id="9">
+        <QuestionText>Sníh, náledí nebo rozbředlý sníh na vozovce vyžadují:</QuestionText>
+        <Answer Id="a" IsCorrect="true">jízdu se zvýšenou opatrností, přizpůsobenou stavu vozovky</Answer>
+        <Answer Id="b" IsCorrect="false">brzdění s použitím parkovací brzdy</Answer>
+        <Answer Id="c" IsCorrect="false">zatížení vozidla na hodnotu celkové hmotnosti uvedené v technickém průkazu vozidla</Answer>
+    </Question>
+    <Question Id="10">
+        <QuestionText>Vozidlo musí mít za jízdy při snížené viditelnosti:</QuestionText>
+        <Answer Id="a" IsCorrect="false">rozsvícena jen tlumená světla</Answer>
+        <Answer Id="b" IsCorrect="false">rozsvícena jen obrysová světla</Answer>
+        <Answer Id="c" IsCorrect="true">rozsvícena obrysová a potkávací světla nebo dálková světla, pokud je jimi vybaveno podle zvláštního právního předpisu</Answer>
+    </Question>
+    <Question Id="11">
+        <QuestionText>V pěší zóně smí řidič jet rychlostí:</QuestionText>
+        <Answer Id="a" IsCorrect="false">nejvýše 10 km/h</Answer>
+        <Answer Id="b" IsCorrect="true">nejvýše 20 km/h</Answer>
+        <Answer Id="c" IsCorrect="false">nejvýše 30 km/h</Answer>
+    </Question>
+	<Question Id="12">
+        <QuestionText>Vjíždět na dálnici a vyjíždět z dálnice smí řidič:</QuestionText>
+        <Answer Id="a" IsCorrect="false">potahového vozidla nebo nemotorového vozidla u parkoviště</Answer>
+        <Answer Id="b" IsCorrect="false">rychlostí vozidla nepřesahující 50km.h-1</Answer>
+        <Answer Id="c" IsCorrect="true">jen na místech k tomu určených</Answer>
+    </Question>
+	<Question Id="13">
+        <QuestionText>Před železničním přejezdem:</QuestionText>
+        <Answer Id="a" IsCorrect="false">řidič nesmí řadit rychlostní stupně</Answer>
+        <Answer Id="b" IsCorrect="false">musí řidič vždy zastavit, aby se přesvědčit, zda může železniční přejezd bezpečně přejet</Answer>
+        <Answer Id="c" IsCorrect="true">si musí řidič počínat zvlášť opatrně, zejména se přesvědčit, zda může železniční přejezd bezpečně přejet</Answer>
+    </Question>
+	<Question Id="14">
+        <QuestionText>Při vlečení motorového vozidla na tyči musí být délka tyče taková, aby vzdálenost mezi vozidly nebyla:</QuestionText>
+        <Answer Id="a" IsCorrect="false">menší než 1 m a větší než 5 m</Answer>
+        <Answer Id="b" IsCorrect="false">menší než 1,5 m a větší než 5 m</Answer>
+        <Answer Id="c" IsCorrect="true">menší než 1 m a větší než 6 m</Answer>
+    </Question>
+	<Question Id="15">
+        <QuestionText>V pěší zóně:</QuestionText>
+        <Answer Id="a" IsCorrect="true">smějí chodci užívat pozemní komunikaci v celé její šířce</Answer>
+        <Answer Id="b" IsCorrect="false">mohou chodci užít k chůzi pouze chodníku, ale kde chodník není, užijí levou krajnici či levý okraj vozovky</Answer>
+        <Answer Id="c" IsCorrect="false">mohou chodci užít k chůzi pouze chodníku, a kde chodník není, mohou užít pozemní komunikaci v celé šířce</Answer>
+    </Question>
+	<Question Id="16">
+        <QuestionText>Zvýšené riziko ztráty přilnavosti pneumatik a následného smyku za deště hrozí:</QuestionText>
+        <Answer Id="a" IsCorrect="true">v úseku s vyjetými kolejemi</Answer>
+        <Answer Id="b" IsCorrect="false">na silnici nižší třídy</Answer>
+        <Answer Id="c" IsCorrect="false">na vozovce s betonovým povrchem</Answer>
+    </Question>
+	<Question Id="17">
+        <QuestionText>Mezi prvky aktivní bezpečnosti patří:</QuestionText>
+        <Answer Id="a" IsCorrect="false">airbag</Answer>
+        <Answer Id="b" IsCorrect="false">deformovatelná příď</Answer>
+        <Answer Id="c" IsCorrect="true">dobrý výhled z vozidla</Answer>
+    </Question>
+	<Question Id="18">
+        <QuestionText>Mezi prvky pasivní bezpečnosti patří:</QuestionText>
+        <Answer Id="a" IsCorrect="false">účinný brzdový systém</Answer>
+        <Answer Id="b" IsCorrect="true">zádržné systémy</Answer>
+        <Answer Id="c" IsCorrect="false">aerodynamická stabilita</Answer>
+    </Question>
+	<Question Id="19">
+        <QuestionText>Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:</QuestionText>
+        <Answer Id="a" IsCorrect="false">přibližně 60 stlačení za minutu</Answer>
+        <Answer Id="b" IsCorrect="true">přibližně 100 stlačení za minutu</Answer>
+        <Answer Id="c" IsCorrect="false">přibližně 20 stlačení za minutu</Answer>
+    </Question>
+	<Question Id="20">
+        <QuestionText>Účastník provozu na pozemních komunikacích:</QuestionText>
+        <Answer Id="a" IsCorrect="false">je pouze řidič motorových vozidel a chodec</Answer>
+        <Answer Id="b" IsCorrect="true">je každý, kdo se přímým způsobem účastní provozu na pozemních komunikacích</Answer>
+        <Answer Id="c" IsCorrect="false">je každý, kdo se účastní provozu na pozemních komunikacích s výjimkou dětí</Answer>
+    </Question>
+</Questions>

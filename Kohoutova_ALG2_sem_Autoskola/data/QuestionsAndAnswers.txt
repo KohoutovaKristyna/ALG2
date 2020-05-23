@@ -1,0 +1,20 @@
+1;Povinnost nesmět ohrozit a nesmět omezit se vztahuje;a) pouze na řidiče;b) ++na všechny účastníky provozu na pozemních komunikacích, kterým je tato povinnost stanovena zákonem;c) pouze na chodce
+2;Motorové vozidlo:;a) je pouze vozidlo poháněné vlastním motorem;b) je vozidlo poháněné vlastní pohonnou jednotkou, tramvaj a trolejbus;c) ++je nekolejové vozidlo poháněné vlastní pohonnou jednotkou a trolejbus
+3;Znamení o změně směru jízdy paží se dává:;a) po celou dobu jízdního úkonu;b) ++jen před započetím jízdního úkonu;c) po započetí jízdního úkonu
+4;Chodci v pěší zóně:;a) ++musí umožnit jízdu všem vozidlům;b) musí umožnit jízdu pouze vozidlům s právem přednostní jízdy;c) nemusí při užívání pěší zóny brát ohled na pohyb vozidel
+5;Správný tlak huštění pneumatik se zjišťuje:;a) ++na studených, jízdou nezahřátých pneumatikách;b) na jízdou zahřátých pneumatikách;c) na pneumatikách bez ohledu na jejich teplotu
+6;Za křižovatku se považuje:;a) ++vyústění polní nebo lesní cesty nebo jiné účelové pozemní komunikace na jinou pozemní komunikace;b) místo, kde se protínají nebo spojují dvě polní cesty nebo dvě lesní cesty;c) místo, kde se protínají nebo spojují dvě účelové pozemní komunikace
+7;Řidič nesmí při jízdě vozidlem:;a) mít nasazeny ochranné brýle;b) prudce zrychlovat;c) ++držet v ruce nebo jiným způsobem telefonní přístroj nebo jiné hovorové nebo záznamové zařízení
+8;Dojde-li při jízdě vozidla v tunelu k poruše vozidla, pro kterou se toto vozidlo stalo nepojízdným, nebo dojde-li k dopravní nehodě, je řidič povinnen neprodleně:;a) opustit tunel;b) ++vypnout motor, a je-li k vytápění vozidla použito nezávislé topení, vypnout i toto topení;c) vypnout osvětlení vozidla
+9;Sníh, náledí nebo rozbředlý sníh na vozovce vyžadují:;a) ++ jízdu se zvýšenou opatrností, přizpůsobenou stavu vozovky;b) brzdění s použitím parkovací brzdy;c) zatížení vozidla na hodnotu celkové hmotnosti uvedené v technickém průkazu vozidla
+10;Vozidlo musí mít za jízdy při snížené viditelnosti:;a) rozsvícena jen tlumená světla;b) rozsvícena jen obrysová světla;c) ++rozsvícena obrysová a potkávací světla nebo dálková světla, pokud je jimi vybaveno podle zvláštního právního předpisu
+11;V pěší zóně smí řidič jet rychlostí:;a) nejvýše 10 km/h;b) ++nejvýše 20 km/h;c) nejvýše 30 km/h
+12;Vjíždět na dálnici a vyjíždět z dálnice smí řidič:;a) potahového vozidla nebo nemotorového vozidla u parkoviště;b) rychlostí vozidla nepřesahující 50km.h-1;c) ++jen na místech k tomu určených
+13;Před železničním přejezdem:;a) řidič nesmí řadit rychlostní stupně;b) musí řidič vždy zastavit, aby se přesvědčit, zda může železniční přejezd bezpečně přejet;c) ++si musí řidič počínat zvlášť opatrně, zejména se přesvědčit, zda může železniční přejezd bezpečně přejet
+14;Při vlečení motorového vozidla na tyči musí být délka tyče taková, aby vzdálenost mezi vozidly nebyla:;a) menší než 1 m a větší než 5 m;b) menší než 1,5 m a větší než 5 m;c) ++menší než 1 m a větší než 6 m
+15;V pěší zóně:;a) ++smějí chodci užívat pozemní komunikaci v celé její šířce;b) mohou chodci užít k chůzi pouze chodníku, ale kde chodník není, užijí levou krajnici či levý okraj vozovky;c) mohou chodci užít k chůzi pouze chodníku, a kde chodník není, mohou užít pozemní komunikaci v celé šířce
+16;Zvýšené riziko ztráty přilnavosti pneumatik a následného smyku za deště hrozí:;a) ++v úseku s vyjetými kolejemi;b) na silnici nižší třídy;c) na vozovce s betonovým povrchem
+17;Mezi prvky aktivní bezpečnosti patří:;a) airbag;b) deformovatelná příď;c) ++dobrý výhled z vozidla
+18;Mezi prvky pasivní bezpečnosti patří:;a) účinný brzdový systém;b) ++zádržné systémy;c) aerodynamická stabilita
+19;Správná frekvence stlačení hrudní kosti při srdeční masáži je u dospělého:;a) přibližně 60 stlačení za minutu;b) ++přibližně 100 stlačení za minutu;c) přibližně 20 stlačení za minutu
+20;Účastník provozu na pozemních komunikacích:;a) je pouze řidič motorových vozidel a chodec;b) ++je každý, kdo se přímým způsobem účastní provozu na pozemních komunikacích;c) je každý, kdo se účastní provozu na pozemních komunikacích s výjimkou dětí

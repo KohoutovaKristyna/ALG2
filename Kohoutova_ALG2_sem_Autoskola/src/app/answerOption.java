@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
+package app;
 
 /**
  *
  * @author kristyna kohoutova
  */
-public class Vyjimky {
-    
-}
+public enum answerOption { a, b, c; }

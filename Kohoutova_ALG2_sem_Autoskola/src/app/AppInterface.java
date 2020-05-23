@@ -10,13 +10,13 @@ package app;
  * @author kristyna kohoutova
  */
 public interface AppInterface {
-    public void createTestPerson(String jmeno, String prijmeni, String email);
+    public void createTestPerson(String jmeno, String prijmeni);
     
-    public void showQuestion();
+    public String showQuestion(int number);
     
-    public void takeAnswer(String answer);  
+    public boolean takeAnswer(int questionNo, String answer);  
 
-    public void giveResults();
+    public String giveResults();
 
     public void showByAlphabet();
 

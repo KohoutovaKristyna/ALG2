@@ -7,6 +7,7 @@ package ui;
 
 import app.AppInterface;
 import app.AutoskolaEditor;
+import app.QuestionList;
 import java.util.Scanner;
 
 /**
@@ -25,11 +26,12 @@ public class AutoskolaUI{
         boolean keepGoing = true;
         String userAnswer;
         boolean wrongAnswer;
-        String jmeno, prijmeni, email;
+        String jmeno, prijmeni;
         String answer;
         boolean keepShowing = true;
         String showingAN;
         String resultChoise;
+        
 
         //the body of program
         while (keepGoing) {
@@ -38,23 +40,27 @@ public class AutoskolaUI{
             jmeno = sc.nextLine();
             System.out.println("Zadejte sve prijmeni");
             prijmeni = sc.nextLine();
-            System.out.println("Zadejte svuj email, pro odeslani vyhodnocenych vysledku");    //mozna nebude potreba
-            email = sc.nextLine();
-            aut.createTestPerson(jmeno, prijmeni, email);
             
+            aut.createTestPerson(jmeno, prijmeni);
+                 
+            System.out.println(getFormatedStart());
+             
             for (int i = 0; i < 10; i++) {
-                aut.showQuestion();
+                System.out.println(aut.showQuestion(i));
                 if (i==0) {
                     aut.startTimer();
                 }
-                answer = sc.nextLine();
-                aut.takeAnswer(answer);
+                
+                
+                while (!aut.takeAnswer(i, sc.nextLine())) {
+                    System.out.println("Zadejte a nebo b nebo c");
+                
+                }
             }
             aut.endTimer();
             
-            aut.giveResults();
+            System.out.println(aut.giveResults());
             
-            // tady bude push do databaze???
             while(keepShowing){                  //asi umelat metodu z toho
             System.out.println("Zadejte jakym zpusobem chcete zobrazit statistiku vysledku");
             System.out.println("1 Podle poradi otazek");
@@ -103,5 +109,13 @@ public class AutoskolaUI{
                 }
             }
         }
+    }
+    
+    public static String getFormatedStart(){
+        String output = "";
+        output = "\n********************************************************************************\n"
+                + "--------------------------------ZACATEK TESTU-----------------------------------\n"
+                + "********************************************************************************\n";
+        return output;
     }
 }

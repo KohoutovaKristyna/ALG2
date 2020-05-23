@@ -12,12 +12,10 @@ package app;
 public class TestPerson {
     private String jmeno;
     private String prijmeni;
-    private String email;
 
-    public TestPerson(String jmeno, String prijmeni, String email) {
+    public TestPerson(String jmeno, String prijmeni) {
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
-        this.email = email;
     }
 
     public String getJmeno() {
@@ -27,10 +25,5 @@ public class TestPerson {
     public String getPrijmeni() {
         return prijmeni;
     }
-
-    public String getEmail() {
-        return email;
-    }
-    
     
 }
