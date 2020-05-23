@@ -12,12 +12,16 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
 /**
- *
+ * This class enables to work with the data in the XML files
  * @author kristyna kohoutova
  */
 public class ImportXML {
 
-   // public static File dataDirectory = new File(System.getProperty("user.dir") + File.separator + "data");
+   /**
+    * Method enables the program to get the questions 
+    * @param fileName is the name of the file from which we need the data to the program
+    * @return list of questions
+    */
     public static QuestionList readFromXML(String fileName) {
         
         app.QuestionList questions = null;

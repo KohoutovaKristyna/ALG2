@@ -18,11 +18,20 @@ public interface AppInterface {
 
     public String giveResults();
 
-    public void showByAlphabet();
+    public String showByAlphabet();
 
-    public void showByCorrectness();
+    public String showByCorrectness();
 
     public void endTimer();
 
     public void startTimer();
+    
+    public boolean writeResultToFile(String firstName, String surName, String fileContent);
+    
+    public void resetInformations();
+    
+    public String showAllTestResults(String fileName);
+    
+    public String callThePreviousTestResults();
+
 }

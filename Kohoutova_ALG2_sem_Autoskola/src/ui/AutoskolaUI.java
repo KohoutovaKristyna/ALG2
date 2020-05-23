@@ -65,12 +65,16 @@ public class AutoskolaUI{
             System.out.println("Zadejte jakym zpusobem chcete zobrazit statistiku vysledku");
             System.out.println("1 Podle poradi otazek");
             System.out.println("2 Podle spravnosti");
+            System.out.println("3 Vypsani statistiky Vasich posavadnich absolvovanych testu");
             resultChoise = sc.nextLine();
             if(resultChoise.equals("1")){
-                aut.showByAlphabet();
+                System.out.println(aut.showByAlphabet());
             }
             else if(resultChoise.equals("2")){
-                aut.showByCorrectness(); 
+                System.out.println(aut.showByCorrectness()); 
+            }
+            else if(resultChoise.equals("3")){
+                System.out.println(aut.callThePreviousTestResults());
             }
             else{
                 System.out.println("Spatna volba zkuste to znovu");

@@ -7,6 +7,8 @@ package app;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -18,7 +20,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
  */
 @XmlRootElement(name = "Questions")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class QuestionList {
+public class QuestionList{
     
     @XmlElement(name = "Question")
     private ArrayList<Question> questionList = new ArrayList<Question>();
@@ -40,5 +42,22 @@ public class QuestionList {
     public void shuffleQuestions(){
         Collections.shuffle(questionList);
     }
+    
+    public void sortByGNumber(){
+        Collections.sort(questionList, Comparator.comparing(app.Question::getqNumber));
+    
+    }
+    public void sortByCorrectnes(){
+        Collections.sort(questionList, Comparator.comparing(app.Question::getCorrectAnswer));
+    }
+
+//    @Override
+//    public int compareTo(Object o) {
+//        if(this.equals(o)){
+//        
+//        }
+//
+//    }
+    
     
 }
