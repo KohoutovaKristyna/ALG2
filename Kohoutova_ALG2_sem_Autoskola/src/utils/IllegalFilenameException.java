@@ -9,8 +9,11 @@ package utils;
  *
  * @author kristyna kohoutova
  */
-public class IllegalFilenameException extends Exception {
-
+public class IllegalFilenameException extends RuntimeException {
+    /**
+     * throws the exception with the personalized text message
+     * @param messageToUser the text to the user
+     */
     public IllegalFilenameException(String messageToUser) {
         super(messageToUser);
     }

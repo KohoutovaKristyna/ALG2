@@ -39,10 +39,10 @@ public class Question {
     }
     /**
      * Enables to set the answer list
-     * @param anwerList is the list of the 3 answers
+     * @param answerList is the list of the 3 answers
      */
-    public void setAnwerList(ArrayList<Answer> anwerList) {
-        this.answerList = anwerList;
+    public void setAnswerList(ArrayList<Answer> answerList) {
+        this.answerList = answerList;
     }
     /**
      * Enables to set the question name
@@ -62,7 +62,7 @@ public class Question {
      * Provides the list of answers
      * @return the list of answers
      */
-    public ArrayList<Answer> getAnwerList() {
+    public ArrayList<Answer> getAnswerList() {
         return answerList;
     }
     /**
@@ -79,6 +79,10 @@ public class Question {
             return answerOption.c;
         }
     }
+    /**
+     * Finds out which answer the user answered
+     * @return the users answer
+     */
     public answerOption getYourAnswer(){
         if(answerList.get(0).isYourAnswer()){
             return answerOption.a;
@@ -89,7 +93,10 @@ public class Question {
             return answerOption.c;
         }
     }
-
+    /**
+     * This method adds another answer to the anwer list, which is under the Question
+     * @param answer is the answer we need to add to list
+     */
     public void addToAnswers(Answer answer) {
             this.answerList.add(answer);
     }

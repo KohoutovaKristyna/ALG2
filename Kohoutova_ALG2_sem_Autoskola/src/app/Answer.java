@@ -9,6 +9,10 @@ import javax.xml.bind.annotation.XmlValue;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
+/**
+ * The class answer enables to create object type Answer
+ * @author tynka
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 
 /**
@@ -26,11 +30,18 @@ public class Answer {
     @XmlValue()
     private String text;
     
-
+    /**
+     * Method returns if it is the answer from user
+     * @return if it is the answer from user
+     */
     public boolean isYourAnswer() {
         return yourAnswer;
     }
 
+    /**
+     * Method sets the answer from the user
+     * @param yourAnswer is the answer from user
+     */
     public void setYourAnswer(boolean yourAnswer) {
         this.yourAnswer = yourAnswer;
     }

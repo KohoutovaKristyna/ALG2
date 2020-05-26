@@ -40,6 +40,7 @@ public class AutoskolaUI{
             jmeno = sc.nextLine();
             System.out.println("Zadejte sve prijmeni");
             prijmeni = sc.nextLine();
+            keepShowing = true;
             
             aut.createTestPerson(jmeno, prijmeni);
                  
@@ -63,7 +64,7 @@ public class AutoskolaUI{
             
             while(keepShowing){                  //asi umelat metodu z toho
             System.out.println("Zadejte jakym zpusobem chcete zobrazit statistiku vysledku");
-            System.out.println("1 Podle poradi otazek");
+            System.out.println("1 Podle abecedy (podle otazek - textu)");
             System.out.println("2 Podle spravnosti");
             System.out.println("3 Vypsani statistiky Vasich posavadnich absolvovanych testu");
             resultChoise = sc.nextLine();
@@ -71,24 +72,22 @@ public class AutoskolaUI{
                 System.out.println(aut.showByAlphabet());
             }
             else if(resultChoise.equals("2")){
-                System.out.println(aut.showByCorrectness()); 
+                System.out.println(aut.showByCorrectness());
             }
             else if(resultChoise.equals("3")){
                 System.out.println(aut.callThePreviousTestResults());
             }
-            else{
+            else{              
                 System.out.println("Spatna volba zkuste to znovu");
             }
-            
-                System.out.println("Chcete jeste nejake zobrazeni? (a)");
+                
+                if(resultChoise.equals("1")|| resultChoise.equals("2") || resultChoise.equals("3"))
+                System.out.println("Chcete jeste nejake zobrazeni? (a). Pro ukonceni stisknete libovolnou jinou klavesu nez (a)...");
                 showingAN = sc.nextLine();
                 if(!showingAN.toLowerCase().equals("a")){
                     keepShowing = false;
                 }                
             }
-            
-            
-            
             
             //find out if user wants to continue
             System.out.println("Chcete pokracovat? a/n");     //asi z toho udelat metodu
@@ -114,7 +113,10 @@ public class AutoskolaUI{
             }
         }
     }
-    
+    /**
+     * Shows formated start of the test
+     * @return title start of the test 
+     */
     public static String getFormatedStart(){
         String output = "";
         output = "\n********************************************************************************\n"

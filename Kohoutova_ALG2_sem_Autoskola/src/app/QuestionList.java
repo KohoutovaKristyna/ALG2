@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
- *
+ * This class enables to work with a list of the questions
  * @author kristyna kohoutova
  */
 @XmlRootElement(name = "Questions")
@@ -24,40 +24,51 @@ public class QuestionList{
     
     @XmlElement(name = "Question")
     private ArrayList<Question> questionList = new ArrayList<Question>();
-
+    /**
+     * This method enables to get the list of the questions and work with them 
+     * @return the question list
+     */
     public ArrayList<Question> getQuestionList() {
         return questionList;
     }
-
+    /**
+     * Enables to add a question to the list
+     * @param question is the question we need to add
+     */
     public void addQuestion(Question question){
         this.questionList.add(question);
     }
-    
+    /**
+     * Enables to get the size of the list
+     * @return the size of the list 
+     */
     public int getSize(){
         return questionList.size();
     }
+    /**
+     * Enables to get the question on the index
+     * @param index is the number of the question in the list
+     * @return the question
+     */
     public Question getQuestion(int index){
         return questionList.get(index);
     }
+    /**
+     * This method shuffle the order of the questions in the list
+     */
     public void shuffleQuestions(){
         Collections.shuffle(questionList);
     }
-    
-    public void sortByGNumber(){
-        Collections.sort(questionList, Comparator.comparing(app.Question::getqNumber));
-    
+    /**
+     * The method sort the list of the questions by the question text
+     */
+    public void sortByQuestionText(){
+        Collections.sort(questionList, Comparator.comparing(app.Question::getQuestion));
+    /**
+     * The method sort the list of the questions depending on the user answer, if it was correct or wrong (first are the correct answers)
+     */
     }
     public void sortByCorrectnes(){
         Collections.sort(questionList, Comparator.comparing(app.Question::getCorrectAnswer));
-    }
-
-//    @Override
-//    public int compareTo(Object o) {
-//        if(this.equals(o)){
-//        
-//        }
-//
-//    }
-    
-    
+    }   
 }

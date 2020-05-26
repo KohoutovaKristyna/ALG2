@@ -55,17 +55,23 @@ public class Result {
         return answered;
     }
     /**
-     * Enables 
-     * @param answered 
+     * Enables to set the answer option
+     * @param answered is the option which the user answered
      */
     public void setAnswered(answerOption answered) {
         this.answered = answered;
     }
-
+    /**
+     * Enables to get the option which is correct
+     * @return the correct answer
+     */
     public answerOption getCorrectAnswer() {
         return correctAnswer;
     }
-
+    /**
+     * Enables to set the correct answer
+     * @param correctAnswer is the correct answer
+     */
     public void setCorrectAnswer(answerOption correctAnswer) {
         this.correctAnswer = correctAnswer;
     }
